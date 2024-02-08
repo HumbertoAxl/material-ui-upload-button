@@ -1,0 +1,32 @@
+<div class="file-upload-dropzone">
+  <div class="file-upload-dropzone-button-container">
+    <button class="select-files-button" (click)="fileUpload.click()">
+      SELECT FILES...
+    </button>
+    <input
+      #fileUpload
+      type="file"
+      autocomplete="off"
+      tabindex="-1"
+      aria-hidden="true"
+      name="files"
+      multiple="multiple"
+      dir="ltr"
+      (change)="onFileSelected($event)"
+    />
+  </div>
+  <div ngIf=>Drop files here to upload</div>
+</div>
+<ul class="file-upload-file-list">
+  <li class="file-upload-file" *ngFor="let file of files">
+    <div class="file-upload-file-contents">
+      <span><mat-icon>description</mat-icon></span>
+      <span>
+        <span>{{ file.filename }}.{{ file.ext }}</span>
+        <span>{{ file.status }}</span>
+      </span>
+      <button mat-icon-button><mat-icon>close</mat-icon></button>
+    </div>
+  </li>
+  <li class="file-upload-file"></li>
+</ul>

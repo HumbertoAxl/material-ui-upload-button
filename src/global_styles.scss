@@ -1,0 +1,66 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+
+.cdk-overlay-pane {
+  div.mat-mdc-menu-panel {
+    max-width: none;
+  }
+}
+
+/**
+ * Split button
+ */
+.wairc-split-button {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+
+  .icon-prefix {
+    margin-right: 8px;
+  }
+}
+
+.wairc-split-button-select {
+  width: 30px;
+  min-width: 24px !important;
+  padding: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+
+  .mat-icon {
+    margin: 0 !important;
+  }
+}
+
+.wairc-split-button-menu {
+  font-size: 0.875rem;
+}
+
+@mixin digreg {
+  background-color: #2f835d !important;
+  color: #fff !important;
+}
+.custom-button-class {
+  @include digreg;
+}
+.custom-dropdown-class {
+  @include digreg;
+}
+.custom-menu-class {
+  background-color: cornflowerblue !important;
+  button {
+    color: #fff !important;
+
+    .mat-icon {
+      color: #fff !important;
+    }
+  }
+}
+
+.sbic {
+  color: pink;
+}
